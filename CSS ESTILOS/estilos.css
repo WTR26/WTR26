@@ -148,8 +148,9 @@ nav ul li a.select:hover{
 }
 .cover p{
     margin-top: 10px;
-    color: rgb(211, 167, 167);
+    color: rgb(247, 247, 247);
     font: bold;
+    font-size: 20px;
 }
 
 /*imagen vector*/
