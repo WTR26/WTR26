@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container_all{
+    position: relative;
+    right: 0;  
+    transition: all 300ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+header{
+    width: 100%;
+    height: 100px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background: gray;
+    transition: all 300ms;
+}
+
+/*variable imaginaria*/
+
+.move_content{
+    right: 180px;
+}
+
+.container_header{
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0px 20px;
+}
+header .logo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 150px;
+}
+.container_nav{
+    position: relative;
+    height: 100%;
+}
+nav{
+    height: 100%;
+}
+nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    margin: 0px 20px;
+    list-style: none;
+}
+nav ul li a{
+    color: #373737;
+    font-size: 14px;
+}
+nav ul li a.select:hover{
+    background: rgb(121, 62, 62);
+}
+.select{
+    background: #359ef9;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+}
+.anotherclick:hover{
+    color: red;
+}
+#clicking_smooth:hover{
+    transform: translateY(-3px);
+    transition: all 300ms;
+}
+
+
+/*clase imaginaria que va modificar el menu de navegacion*/
+
+.nav_mod{
+    height: 70px;
+    box-shadow: 1px 1px 10px 0px gray;
+    background: white;
+}
+.btn_menu{
+    width: 50px;
+    height: 50px;
+    font: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 300ms;
+    display: none;
+}
+.btn_menu:hover{
+    background: rgb(173, 172, 172);
+}
+
+/*COVER*/
+.cover{
+    width: 100%;
+    padding-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+}
+.container_cover{
+    max-width: 1200px;
+    margin: 140px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-image: url(../images/16354753904140.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+.cover .container_info{
+    max-width: 400px;
+    margin-top: 40px;
+    z-index: 2;
+}
+.cover h1{
+    max-width: 400px;
+    font-size: 60px;
+    font-weight: 900;
+    color: #373737;
+}
+.cover h2{
+    font-size: 60px;
+    font-weight: 900;
+    color: #feba0b;   
+}
+.cover p{
+    margin-top: 10px;
+    color: rgb(211, 167, 167);
+    font: bold;
+}
+
+/*imagen vector*/
+
+.container_vector{
+    position: relative;
+}
+.container_vector img{
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    width: 400px;
+    animation: move_vector 6s ease-in-out infinite;
+}
+@keyframes move_vector {
+    0%{
+        transform: translateY(10px);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+@media screen and {max-width: 900px){
+    .container_vector img{
+        width: 200px;
+    }
+}
+    
+}
+
+@media screen and (max-width:760px){
+    .container_nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn_menu{
+        display: flex;
+    }
+    nav{
+        height: 100%;
+        background: rgb(167, 167, 223);
+        position: fixed;
+        top: 0px;
+        right: -180px;
+        padding: 0px 40px;
+        transition: all 300ms;
+    }
+
+    .move_nav{ 
+        right: 0px;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        margin: 20px 0px;
+    }
+
+    .container_vector img{
+        transform: scale(0);
+        animation: none;
+    }
+    .container_cover{
+        background-position: center;
+    }
+}
+
+/*Since here we are gonna work with main in general but the content that is above the cards*/
+
+.main_all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    font-family : poppins ;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+}
+.pregunta{
+    text-align: center;
+    font-size: 40px;
+    color: #6a6a6a;
+    margin-bottom: 40px;
+}
+.intro{
+    width: 100%;
+}
+p.text{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size: 40px;
+    color: #272727;
+}
+h4{
+    text-align: center;
+    font-size: 50px;
+    color: #feba0b;
+}
+/*Designing cards'boddy is what will happen now */
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 40px;
+}
+.container .card{
+    width: 330px;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px  2px  rgba(0 0 0 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all .25s;
+}
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow:  0 16px 16px rgba(0 0 0 0.2);
+}
+.container .card img{
+    width: 330px;
+    height: 220px;
+    object-fit: cover;
+}
+.container .card h4{
+    font-size: 20px;
+    color: rgb(61, 57, 57);
+}
+.container .card p{
+    text-align: justify;
+}
+/*We have just finished our hover style cards*/
+
+.tipos_de_servicios{
+    text-align: center;
+    max-width: 1200px;
+    margin: 40px auto 40px;
+}
+.tipos_de_servicios h1{
+    font-family: poppins;
+    font-size: 40px;
+    color: rgb(241, 125, 30);
+    margin-bottom: 20px;
+}
+.container_services{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+.card-{
+    width: 300px;
+    height: 600px;
+    border-radius: 10px;
+}
+.card- h3{
+    align-items: center;
+    color: #0c0c0b;
+    font-size: 20px;
+}
+.card- img{
+    width: 300px;
+    height: 400px;
+    animation: translation 3s ease-in-out infinite;
+}
+@keyframes translation{
+    0%{
+        transform: translateY(10px);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+/*I have just finished with the whole main and i would like to begin coding the footer in order to complete my web page*/
+
+.footer_all{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.footer_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  background: rgb(49, 49, 46);
+}
+.container_footer_card{
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    margin: auto;
+}
+.container_footer_card h2{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+}
+.container_footer_card .business{
+    text-align: justify;
+    font-family: poppins;
+    letter-spacing: .2em;
+    margin-top: 60px;
+    color: white;
+}
+.RS h2{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 60px;
+
+}
+.RS{
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    margin: auto;
+}
+.RS_container{
+    display: flex;
+    justify-content: space-around;
+}
+.redes_sociales{
+    margin: 30px;
+}
+.RS .redes_sociales a{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.RS .redes_sociales img{
+    width: 50px;
+}
+
+/*I am Going to make direction's design*/
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+.direction{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.direction img{
+    width: 50px;
+}
+.Whatsapp{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}  
+.Whatsapp img{
+    width: 50px;
+}
+.Telegram{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+.Telegram img{
+    width: 50px;
+}
+
+/*last footer*/
+
+.footer_below{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(14, 13, 13);
+    color: white;
+    font-family: poppins;
+    padding: 20px;
+}
+/*This is one my best project made own my own and also a lot of usefull material i found on You Tube, i really apreciate all the help i could get from there*/

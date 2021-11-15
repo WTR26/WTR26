@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'poppins';
+}
+
+.container_all{
+    position: relative;
+    right: 0;  
+    transition: all 300ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgb(211, 226, 182);
+}
+header{
+    width: 100%;
+    height: 100px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background: gray;
+    transition: all 300ms;
+}
+
+/*variable imaginaria*/
+
+.move_content{
+    right: 180px;
+}
+
+.container_header{
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0px 20px;
+}
+header .logo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 150px;
+}
+.container_nav{
+    position: relative;
+    height: 100%;
+}
+nav{
+    height: 100%;
+}
+nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    margin: 0px 20px;
+    list-style: none;
+}
+#first_click:hover{
+    transform: translateY(-3px);
+    transition: all 300ms;
+}
+#second_click:hover{
+    transform: translateY(-3px);
+    transition: all 300ms;
+}
+#third_click:hover{
+    transform: translateY(-3px);
+    transition: all 300ms;
+}
+nav ul li a{
+    color: #373737;
+    font-size: 14px;
+}
+nav ul li a.selector:hover{
+    background: rgb(121, 62, 62);
+}
+.selector{
+    background: #359ef9;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+}
+.hover_click:hover{
+    color: red;
+}
+
+/*clase imaginaria que va modificar el menu de navegacion*/
+
+.nav_mod{
+    height: 70px;
+    box-shadow: 1px 1px 10px 0px gray;
+    background: white;
+}
+.boton_menu{
+    width: 50px;
+    height: 50px;
+    font: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 300ms;
+    display: none;
+}
+.boton_menu:hover{
+    background: rgb(173, 172, 172);
+}
+
+@media screen and (max-width:760px){
+    .container_nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .boton_menu{
+        display: flex;
+    }
+    nav{
+        height: 100%;
+        background: rgb(167, 167, 223);
+        position: fixed;
+        top: 0px;
+        right: -180px;
+        padding: 0px 40px;
+        transition: all 300ms;
+    }
+
+    .move_nav{ 
+        right: 0px;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        margin: 20px 0px;
+    }
+}
+
+/*Since here we are gonna work with main in general but the content that is above the cards*/
+
+.main_all{
+    width: 100%;
+    max-width: 1200px;
+    height:100%;
+    margin: 105px auto 0px;
+    overflow: hidden;
+}
+.servicioalcliente{
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.servicioalcliente .ubication{
+    width: 600px;
+    height: 450px;
+    font-family: 'poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+.servicioalcliente .ubication h2{
+    color: rgb(134, 88, 67);
+    font-size: 30px;
+}
+.ubication div{
+    margin: 10px 0px;
+}
+.ubication div h3{
+    font-size: 20px;
+    color: gray;
+}
+.ubication div h4{
+    font-size: 20px;
+    color: gray;
+}
+.ubication h5{
+    font-size: 20px;
+    color: gray;
+}
+.ubication span{
+    font-size: 18px;
+    color: rgb(65, 65, 175);
+    cursor: pointer;
+}
+.icon_whatsapp{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: block;
+    bottom: 10px;
+    position: fixed;
+    right:10px;
+}
+.icon_whatsapp:active{
+    transform: scale(0.9);
+}
+.mapa .map{
+    width: 600px;
+    height: 450px;
+}
+.form_wts{
+    width: 220px;
+    height: 280px;
+    background: rgb(109, 105, 99);
+    position: fixed;
+    bottom: 80px ;
+    right: 50px;
+    box-shadow: 8 2px 20px 8 rgba(0, 8, 8, 0.22);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+.form_wts p{
+    text-align: center;
+    font-family: 'poppins';
+}
+.entrar_y_salir{
+    display: block;
+}
+.inputwts{
+    width: 100%;
+    padding: 5px;
+    color: rgb(3, 3, 3);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .19);
+}
+.inputwts:focus{
+    outline: none;
+}
+.texttarea{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;  
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    padding: 5px;
+    color: #666;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .19);
+
+
+}
+.texttarea:focus{
+    outline: none;
+}
+
+.btn_wts{
+    width: 100%;
+    background: green;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/*I have just finished with the whole main and i would like to begin coding the footer in order to complete my web page*/
+
